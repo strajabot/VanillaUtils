@@ -1,0 +1,6 @@
+name: VanillaUtils
+version: ${project.version}
+main: me.strajabot.vanillautils.VanillaUtils
+prefix: VanillaUtils
+authors: [Strajabot]
+description: Helper plugin for all the needs of our almost vanilla server
