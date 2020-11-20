@@ -3,6 +3,7 @@ package me.strajabot.vanillautils.modules;
 import com.google.common.base.Preconditions;
 import me.strajabot.vanillautils.Messages;
 import me.strajabot.vanillautils.VanillaUtils;
+import me.strajabot.vanillautils.modules.clearweather.ClearWeather;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.*;
@@ -19,6 +20,10 @@ public class ModuleManager {
     public ModuleManager() {
         available = new HashMap<>();
         enabled = new ArrayList<>();
+
+        addModule(new ClearWeather());
+        //todo: add a configuration file where you can configure which modules are enabled on startup
+        enableModule("weather_clear");
     }
 
     private void addModule(@NotNull Module module) {
